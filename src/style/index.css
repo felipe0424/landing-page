@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-royal-900: #010B24;
+  --bg-royal-700: #000E31;
+  --bg-royal-500: #071A4C;
+  --brand-900: #957E35;
+  --brand-800: #AC9859;
+  --brand-700: #D5C38A;
+  --brand-500: #CCBC6F;
+  --brand-400: #E4D694;
+  --brand-300: #F3E8B9;
+  --white: #FFFFFF;
+  --black: #00040F;
+  --gray: #989898;
+
+  --font-family: "Barlow Condensed", sans-serif;
+  --h1: 800 24px/140% var(--font-family);
+  --h2: 600 16px/140% var(--font-family);
+  --h3: 500 14px/140% var(--font-family);
+  --text: 400 16px/140% var(--font-family);
+  --text-span: 400 14px/145% var(--font-family);
+  --text-p: 300 14px/160% var(--font-family);
+}
+
+body {
+  background-image: url(../assets/images/BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+header {
+  margin: 24px;
+  padding: 4px;
+}
+
+header img {
+width: 110px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  gap: 24px;
+}
+
+h1 {
+  font: var(--h1);
+  color: var(--brand-700);
+}
+
+p {
+  font: var(--text);
+  color: var(--brand-700);
+}
+
+button {
+background-color: var(--brand-400);
+-webkit-border-radius: 8px; 
+-moz-border-radius: 8px;
+border-radius: 8px;
+border: none;
+padding: 10px 20px;
+width: 150px;
+color: var(--bg-royal-500);
+font-size: 12px;
+cursor: pointer;
+}
+
+
+.agendar {
+  background-image: url(../assets/images/CONTATO-BG.png);
+  background-repeat: no-repeat;
+  background-size: fill;
+  height: 220px;
+  width: 472px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.agendar div {
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 222px;
+  padding-top: 32px;
+}
+
+.localizacao {
+  background-image: url(../assets/images/LOCALIZAÇÃO-BG.png);
+  background-repeat: no-repeat;
+  background-size: fill;
+  height: 220px;
+  width: 472px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.localizacao div {
+  max-width: 236px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 35px;
+  margin-top: 32px;
+}
+
+.site {
+  background-image: url(../assets/images/SITE-BG.png);
+  background-repeat: no-repeat;
+  background-size: fill;
+  height: 220px;
+  width: 472px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.site div {
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 35px;
+  margin-top: 32px;
+}
+
+footer {
+  margin: 36px;
+}
+
+footer p {
+  font: var(--text);
+  color: var(--brand-300);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile screens */
+@media (max-width: 436px) {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Barlow Condensed", sans-serif;
+  --h1-mobile: 800 20px/140% var(--font-family);
+  --h2-mobile: 600 14px/140% var(--font-family);
+  --h3-mobile: 500 12px/140% var(--font-family);
+  --text-mobile: 400 12px/140% var(--font-family);
+  --text-span-mobile: 400 12px/145% var(--font-family);
+  --text-p-mobile: 300 12px/160% var(--font-family);
+}
+
+/* body {
+  background-image: url(../assets/images/BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+} */
+header {
+margin: 8px;
+padding: 4px;
+
+}
+
+header img {
+  margin: 8px;
+  padding: 4px;
+  width: 110px;
+}
+
+/* main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+} */
+
+h1 {
+  font: var(--h1-mobile);
+  color: var(--brand-700);
+}
+
+p {
+  font: var(--text-mobile);
+  color: var(--brand-700);
+}
+
+button {
+background-color: var(--brand-400);
+border-radius: 8px;
+border: none;
+padding: 10px 20px;
+width: 140px;
+color: var(--bg-royal-500);
+font-size: 12px;
+cursor: pointer;
+}
+
+.agendar {
+height: auto;
+width: 350px;
+border-radius: 20px;
+}
+.localizacao {
+height: auto;
+width: 350px;
+border-radius: 20px;
+}
+
+.site {
+height: auto;
+width: 350px;
+border-radius: 20px;
+}
+
+.agendar {
+  background-image: url(../assets/images/CONTATO-BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.agendar > div {
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  margin-left: 170px;
+  margin-bottom: 24px;
+}
+
+.localizacao {
+  background-image: url(../assets/images/LOCALIZAÇÃO-BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.localizacao > div {
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 35px;
+  margin-bottom: 24px;
+}
+
+.site {
+  background-image: url(../assets/images/SITE-BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.site > div {
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 35px;
+  margin-bottom: 24px;
+}
+
+footer {
+  margin: 36px;
+}
+
+footer p {
+  font: var(--text);
+  color: var(--brand-300);
+}
+}
+
+
+/* teste */
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  background-image: url('/src/assets/images/bg2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* header {
+  width: 100%;
+  background-color: #B3B6BA;
+  padding: 16px;
+  height: 80px;
+} */
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between; /* Distribui os itens */
+  align-items: center; /* Centraliza verticalmente os itens */
+  width: 100%; /* Garante que a largura ocupe todo o espaço do header */
+}
+
+nav ul {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os itens do menu */
+  list-style: none;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  gap: 90px;
+  margin: auto;
+  padding: 80px;
+} */
+
+main section {
+  max-width: 270px;
+  color: #fff;
+}
+
+main img {
+  width: 230px;
+}
+
