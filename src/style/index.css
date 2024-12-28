@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+/* Para navegadores modernos */
+.element {
+  overflow: hidden; /* Oculta a barra de rolagem */
+  overflow-y: scroll; /* Permite rolar verticalmente, mas sem exibir a barra */
+  scrollbar-width: none; /* Para Firefox */
+}
+
+.element::-webkit-scrollbar {
+  display: none; /* Para navegadores baseados em Webkit, como Chrome e Edge */
+}
+
+
 :root {
   --bg-royal-900: #041D38;
   --bg-royal-700: #000E31;
@@ -325,3 +337,13 @@ body {
   width: 230px;
 } */
 
+/* Para navegadores modernos */
+.element {
+  overflow: hidden; /* Oculta a barra de rolagem */
+  overflow-y: scroll; /* Permite rolar verticalmente, mas sem exibir a barra */
+  scrollbar-width: none; /* Para Firefox */
+}
+
+.element::-webkit-scrollbar {
+  display: none; /* Para navegadores baseados em Webkit, como Chrome e Edge */
+}
