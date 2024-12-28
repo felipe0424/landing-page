@@ -5,16 +5,51 @@
 }
 
 /* Para navegadores modernos */
-.element {
-  overflow: hidden; /* Oculta a barra de rolagem */
-  overflow-y: scroll; /* Permite rolar verticalmente, mas sem exibir a barra */
-  scrollbar-width: none; /* Para Firefox */
+body {
+  background-image: url(../assets/images/BG2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Mantém o fundo fixo */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  color: var(--gray);
+
 }
 
-.element::-webkit-scrollbar {
-  display: none; /* Para navegadores baseados em Webkit, como Chrome e Edge */
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 
+body::-webkit-scrollbar-track {
+  background: transparent; /* Cor de fundo da trilha da barra de rolagem */
+}
+
+/* Tira as barras de rolagem padrão */
+body {
+  overflow: auto;
+}
+
+/* Mover a barra de rolagem para o topo (usando uma barra personalizada) */
+.scroll-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--bg-royal-500);
+  z-index: 9999;
+}
+
+.scroll-bar {
+  height: 100%;
+  width: 0;
+  background: #111;
+  border-radius: 10px;
+}
 
 :root {
   --bg-royal-900: #041D38;
@@ -39,17 +74,6 @@
   --text-p: 300 14px/160% var(--font-family);
 }
 
-body {
-  background-image: url(../assets/images/BG2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  color: var(--gray);
-}
-
 header {
   margin: 24px;
   padding: 4px;
@@ -65,7 +89,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
+  justify-content: center; /* Centraliza os itens verticalmente */
   gap: 24px;
   color: var(--gray);
 }
@@ -79,22 +103,18 @@ p {
 }
 
 button {
-background-color: var(--gray);
--webkit-border-radius: 8px; 
--moz-border-radius: 8px;
-border-radius: 8px;
-border: none;
-padding: 10px 20px;
-width: 150px;
-margin-top: 8px;
-font-size: 12px;
-cursor: pointer;
-color: var(--bg-royal-500);
-
+  background-color: var(--gray);
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  width: 150px;
+  margin-top: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--bg-royal-500);
 }
 
-.agendar {
-  background-image: url(../assets/images/CONTATO.png);
+.agendar, .localizacao, .site {
   background-repeat: no-repeat;
   background-size: cover;
   height: 220px;
@@ -103,7 +123,19 @@ color: var(--bg-royal-500);
   display: flex;
 }
 
-.agendar div {
+.agendar {
+  background-image: url(../assets/images/CONTATO.png);
+}
+
+.localizacao {
+  background-image: url(../assets/images/LOCALIZAÇÃO.jpg);
+}
+
+.site {
+  background-image: url(../assets/images/SITE.jpg);
+}
+
+.agendar div, .localizacao div, .site div {
   max-width: 250px;
   display: flex;
   flex-direction: column;
@@ -112,41 +144,13 @@ color: var(--bg-royal-500);
   padding-top: 18px;
 }
 
-.localizacao {
-  background-image: url(../assets/images/LOCALIZAÇÃO.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 220px;
-  width: 472px;
-  border-radius: 20px;
-  display: flex;
-}
-
 .localizacao div {
-  max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
   margin-left: 45px;
   margin-top: 32px;
 }
 
-.site {
-  background-image: url(../assets/images/SITE.jpg);
-  background-repeat: no-repeat;
-  background-size: fill;
-  height: 220px;
-  width: 472px;
-  border-radius: 20px;
-  display: flex;
-}
-
 .site div {
-  max-width: 220px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-left: 35px;
+  margin-left: 155px;
   margin-top: 32px;
 }
 
@@ -159,191 +163,52 @@ footer p {
 }
 
 /* Media Queries for Responsiveness */
-
-/* Mobile screens */
 @media (max-width: 436px) {
+  :root {
+    --h1-mobile: 800 20px/140% var(--font-family);
+    --h2-mobile: 600 14px/140% var(--font-family);
+    --h3-mobile: 500 12px/140% var(--font-family);
+    --text-mobile: 400 12px/140% var(--font-family);
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  body {
+    background-image: url(../assets/images/BG2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain; /* Ajusta o fundo para telas menores */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
 
-:root {
-  --font-family: "Barlow Condensed", sans-serif;
-  --h1-mobile: 800 20px/140% var(--font-family);
-  --h2-mobile: 600 14px/140% var(--font-family);
-  --h3-mobile: 500 12px/140% var(--font-family);
-  --text-mobile: 400 12px/140% var(--font-family);
-  --text-span-mobile: 400 12px/145% var(--font-family);
-  --text-p-mobile: 300 12px/160% var(--font-family);
-}
+  header img {
+    width: 110px;
+  }
 
-body {
-  background-image: url(../assets/images/BG2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-} 
+  main {
+    gap: 16px;
+  }
 
-header {
-margin: 8px;
-padding: 4px;
+  .agendar, .localizacao, .site {
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+  }
 
-}
+  .agendar div, .localizacao div, .site div {
+    max-width: 150px;
+    margin-bottom: 24px;
+  }
 
-header img {
-  margin: 8px;
-  padding: 4px;
-  width: 110px;
-}
+  .agendar {
+    background-image: url(../assets/images/CONTATO.png);
+  }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-} 
+  .localizacao {
+    background-image: url(../assets/images/LOCALIZAÇÃO.png);
+  }
 
-.agendar {
-height: auto;
-width: 350px;
-border-radius: 20px;
-}
-.localizacao {
-height: auto;
-width: 350px;
-border-radius: 20px;
-}
-
-.site {
-height: auto;
-width: 350px;
-border-radius: 20px;
-}
-
-.agendar {
-  background-image: url(../assets/images/CONTATO.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.agendar > div {
-  max-width: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 100%;
-  margin-left: 170px;
-  margin-bottom: 24px;
-}
-
-.localizacao {
-  background-image: url(../assets/images/LOCALIZAÇÃO-BG.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.localizacao > div {
-  max-width: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-left: 35px;
-  margin-bottom: 24px;
-}
-
-.site {
-  background-image: url(../assets/images/SITE-BG.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.site > div {
-  max-width: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-left: 35px;
-  margin-bottom: 24px;
-}
-
-footer {
-  margin: 36px;
-}
-
-footer p {
-  font: var(--text);
-  color: var(--brand-300);
-}
-}
-
-
-/* teste */
-
-/* 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  background-image: url(../assets/images/bg2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-} */
-
-/* header {
-  width: 100%;
-  background-color: #B3B6BA;
-  padding: 16px;
-  height: 80px;
-} */
-
-/* .cabecalho {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; 
-} */
-
-/* nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-} */
-
-
-/* main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  gap: 90px;
-  margin: auto;
-  padding: 80px;
-} */
-
-/* main section {
-  max-width: 270px;
-  color: #fff;
-} */
-
-/* main img {
-  width: 230px;
-} */
-
-/* Para navegadores modernos */
-.element {
-  overflow: hidden; /* Oculta a barra de rolagem */
-  overflow-y: scroll; /* Permite rolar verticalmente, mas sem exibir a barra */
-  scrollbar-width: none; /* Para Firefox */
-}
-
-.element::-webkit-scrollbar {
-  display: none; /* Para navegadores baseados em Webkit, como Chrome e Edge */
+  .site {
+    background-image: url(../assets/images/SITE.png);
+  }
 }
