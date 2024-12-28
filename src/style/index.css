@@ -28,7 +28,7 @@
 }
 
 body {
-  background-image: url(../assets/images/BG.jpg);
+  background-image: url(../assets/images/BG2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -269,7 +269,7 @@ footer p {
 
 /* teste */
 
-
+/* 
 body {
   display: flex;
   flex-direction: column;
@@ -280,7 +280,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-}
+} */
 
 /* header {
   width: 100%;
@@ -289,18 +289,18 @@ body {
   height: 80px;
 } */
 
-.cabecalho {
+/* .cabecalho {
   display: flex;
-  justify-content: space-between; /* Distribui os itens */
-  align-items: center; /* Centraliza verticalmente os itens */
-  width: 100%; /* Garante que a largura ocupe todo o espaço do header */
-}
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+} */
 
-nav ul {
+/* nav ul {
   display: flex;
   gap: 20px; /* Espaçamento entre os itens do menu */
   list-style: none;
-}
+} */
 
 
 /* main {
@@ -313,12 +313,12 @@ nav ul {
   padding: 80px;
 } */
 
-main section {
+/* main section {
   max-width: 270px;
   color: #fff;
-}
+} */
 
-main img {
+/* main img {
   width: 230px;
-}
+} */
 
