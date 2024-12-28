@@ -35,6 +35,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  color: var(--gray);
 }
 
 header {
@@ -55,7 +56,6 @@ main {
   margin: auto;
   gap: 24px;
   color: var(--gray);
-
 }
 
 h1 {
@@ -77,6 +77,8 @@ width: 150px;
 margin-top: 8px;
 font-size: 12px;
 cursor: pointer;
+color: var(--bg-royal-500);
+
 }
 
 .agendar {
@@ -93,15 +95,15 @@ cursor: pointer;
   max-width: 250px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   margin-left: 160px;
   padding-top: 18px;
 }
 
 .localizacao {
-  background-image: url(../assets/images/LOCALIZAÇÃO-BG.png);
+  background-image: url(../assets/images/LOCALIZAÇÃO.jpg);
   background-repeat: no-repeat;
-  background-size: fill;
+  background-size: cover;
   height: 220px;
   width: 472px;
   border-radius: 20px;
@@ -109,16 +111,16 @@ cursor: pointer;
 }
 
 .localizacao div {
-  max-width: 236px;
+  max-width: 250px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-left: 35px;
+  gap: 8px;
+  margin-left: 45px;
   margin-top: 32px;
 }
 
 .site {
-  background-image: url(../assets/images/SITE-BG.png);
+  background-image: url(../assets/images/SITE.jpg);
   background-repeat: no-repeat;
   background-size: fill;
   height: 220px;
@@ -131,7 +133,7 @@ cursor: pointer;
   max-width: 220px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   margin-left: 35px;
   margin-top: 32px;
 }
@@ -142,7 +144,6 @@ footer {
 
 footer p {
   font: var(--text);
-  color: var(--brand-300);
 }
 
 /* Media Queries for Responsiveness */
