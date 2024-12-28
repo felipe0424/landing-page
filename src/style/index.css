@@ -43,7 +43,9 @@ header {
 }
 
 header img {
-width: 180px;
+  margin: 8px;
+  padding: 4px;
+  width: 110px;
 }
 
 main {
