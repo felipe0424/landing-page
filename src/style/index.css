@@ -11,7 +11,7 @@
 }
 
 :root {
-  --bg-royal-900: #010B24;
+  --bg-royal-900: #041D38;
   --bg-royal-700: #000E31;
   --bg-royal-500: #071A4C;
   --brand-900: #957E35;
@@ -22,7 +22,7 @@
   --brand-300: #F3E8B9;
   --white: #FFFFFF;
   --black: #00040F;
-  --gray: #989898;
+  --gray: #B3B6BA;
 
   --font-family: "Barlow Condensed", sans-serif;
   --h1: 800 24px/140% var(--font-family);
@@ -49,7 +49,7 @@ header {
 }
 
 header img {
-width: 110px;
+width: 180px;
 }
 
 main {
@@ -58,36 +58,36 @@ main {
   align-items: center;
   margin: auto;
   gap: 24px;
+  color: var(--gray);
+
 }
 
 h1 {
   font: var(--h1);
-  color: var(--brand-700);
 }
 
 p {
   font: var(--text);
-  color: var(--brand-700);
 }
 
 button {
-background-color: var(--brand-400);
+background-color: var(--gray);
 -webkit-border-radius: 8px; 
 -moz-border-radius: 8px;
 border-radius: 8px;
 border: none;
 padding: 10px 20px;
 width: 150px;
-color: var(--bg-royal-500);
+margin-top: 8px;
 font-size: 12px;
 cursor: pointer;
 }
 
 
 .agendar {
-  background-image: url(../assets/images/CONTATO-BG.png);
+  background-image: url(../assets/images/CONTATO.png);
   background-repeat: no-repeat;
-  background-size: fill;
+  background-size: cover;
   height: 220px;
   width: 472px;
   border-radius: 20px;
@@ -95,12 +95,12 @@ cursor: pointer;
 }
 
 .agendar div {
-  max-width: 220px;
+  max-width: 250px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-left: 222px;
-  padding-top: 32px;
+  margin-left: 160px;
+  padding-top: 18px;
 }
 
 .localizacao {
@@ -209,16 +209,7 @@ p {
   color: var(--brand-700);
 }
 
-button {
-background-color: var(--brand-400);
-border-radius: 8px;
-border: none;
-padding: 10px 20px;
-width: 140px;
-color: var(--bg-royal-500);
-font-size: 12px;
-cursor: pointer;
-}
+
 
 .agendar {
 height: auto;
@@ -302,7 +293,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  background-image: url('/src/assets/images/bg2.jpg');
+  background-image: url(../assets/images/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -329,13 +320,6 @@ nav ul {
   list-style: none;
 }
 
-button {
-  padding: 8px 16px;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
 
 /* main {
   display: flex;
