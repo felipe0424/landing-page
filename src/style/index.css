@@ -24,43 +24,14 @@ body::-webkit-scrollbar {
   height: 0px;
 }
 
-body::-webkit-scrollbar-track {
-  background: transparent; /* Cor de fundo da trilha da barra de rolagem */
-}
-
-/* Tira as barras de rolagem padrão */
 body {
   overflow: auto;
-}
-
-/* Mover a barra de rolagem para o topo (usando uma barra personalizada) */
-.scroll-bar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: var(--bg-royal-500);
-  z-index: 9999;
-}
-
-.scroll-bar {
-  height: 100%;
-  width: 0;
-  background: #111;
-  border-radius: 10px;
 }
 
 :root {
   --bg-royal-900: #041D38;
   --bg-royal-700: #000E31;
   --bg-royal-500: #071A4C;
-  --brand-900: #957E35;
-  --brand-800: #AC9859;
-  --brand-700: #D5C38A;
-  --brand-500: #CCBC6F;
-  --brand-400: #E4D694;
-  --brand-300: #F3E8B9;
   --white: #FFFFFF;
   --black: #00040F;
   --gray: #B3B6BA;
@@ -89,7 +60,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centraliza os itens verticalmente */
+  justify-content: center;
   gap: 24px;
   color: var(--gray);
 }
@@ -164,6 +135,13 @@ footer p {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 436px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   :root {
     --h1-mobile: 800 20px/140% var(--font-family);
     --h2-mobile: 600 14px/140% var(--font-family);
@@ -174,15 +152,17 @@ footer p {
   body {
     background-image: url(../assets/images/BG2.jpg);
     background-repeat: no-repeat;
-    background-size: contain; /* Ajusta o fundo para telas menores */
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   header img {
-    width: 110px;
+    width: 150px;
   }
 
   main {
@@ -190,25 +170,43 @@ footer p {
   }
 
   .agendar, .localizacao, .site {
-    width: 350px;
-    height: auto;
+    max-width: 350px;
+    height: 180px;
     border-radius: 20px;
   }
 
-  .agendar div, .localizacao div, .site div {
-    max-width: 150px;
-    margin-bottom: 24px;
+  .agendar div, .localizacao div, .site div{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+
+   .agendar div {
+    width: 200px;
+    margin: 0.5rem 0 0 7rem;
+  }
+
+  .localizacao div {
+    width: 200px;
+    display: flex;
+    margin: 0.5rem 0 0 3.5rem;
+  }
+
+  .site div {
+    width: 250px;
+    margin: 1rem 0 0 3.5rem;
+  } 
 
   .agendar {
     background-image: url(../assets/images/CONTATO.png);
+    background-size: cover;
   }
 
   .localizacao {
-    background-image: url(../assets/images/LOCALIZAÇÃO.png);
+    background-image: url(../assets/images/LOCALIZAÇÃO.jpg);
   }
 
   .site {
-    background-image: url(../assets/images/SITE.png);
+    background-image: url(../assets/images/SITE.jpg);
   }
 }
