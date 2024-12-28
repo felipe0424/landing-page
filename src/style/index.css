@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --bg-royal-900: #041D38;
   --bg-royal-700: #000E31;
@@ -82,7 +76,6 @@ margin-top: 8px;
 font-size: 12px;
 cursor: pointer;
 }
-
 
 .agendar {
   background-image: url(../assets/images/CONTATO.png);
@@ -171,15 +164,16 @@ footer p {
   --text-p-mobile: 300 12px/160% var(--font-family);
 }
 
-/* body {
-  background-image: url(../assets/images/BG.jpg);
+body {
+  background-image: url(../assets/images/BG2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
-} */
+} 
+
 header {
 margin: 8px;
 padding: 4px;
@@ -192,24 +186,12 @@ header img {
   width: 110px;
 }
 
-/* main {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-} */
-
-h1 {
-  font: var(--h1-mobile);
-  color: var(--brand-700);
-}
-
-p {
-  font: var(--text-mobile);
-  color: var(--brand-700);
-}
-
-
+} 
 
 .agendar {
 height: auto;
@@ -229,7 +211,7 @@ border-radius: 20px;
 }
 
 .agendar {
-  background-image: url(../assets/images/CONTATO-BG.png);
+  background-image: url(../assets/images/CONTATO.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
